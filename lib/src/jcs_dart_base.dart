@@ -10,7 +10,7 @@ class JsonCanonicalizer {
     return sb.toString();
   }
 
-  void serialize(Object o, StringBuffer sb) {
+  void serialize(Object? o, StringBuffer sb) {
     if (o == null || o is num || o is bool || o is String) {
       // Primitive type
       sb.write(json.encode(o));
